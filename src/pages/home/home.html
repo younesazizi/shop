@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color ="primary">
+    <ion-title>
+      Azyou Shop
+    </ion-title>
+
+    <ion-buttons end>
+      <button navPush="AddShoppingItemPage" ion-button>
+        <ion-icon name ="add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <img src='../../assets/imgs/logo.png' />
+  <img src='../../assets/imgs/c.png' />
+  
+  <ion-list>
+    <ion-list-header>
+      Produits Ajoutés :
+    </ion-list-header>
+    
+    <ion-item *ngFor="let item of shoppingList$ | async" detail-push navPush="EditShoppingItemPage" [navParams]="{item: item}">
+      {{item.name}}
+    </ion-item>
+
+  </ion-list>
+
+  <ion-card>
+      <ion-card-content>
+        <p>Faites une liste de vos envies !</p>
+        <p>Cliquez pour faire votre liste de cadeaux !</p>
+        <button navPush="AddShoppingItemPage" ion-button>
+            Ajouter un produit
+          </button>
+        <p> Rendez vous sur Azyou.fr pour un peu d'inspiration ;)</p>
+      </ion-card-content>
+    </ion-card>
+  <img src='../../assets/imgs/a.jpg' />
+      
+
+     
+  
+</ion-content>

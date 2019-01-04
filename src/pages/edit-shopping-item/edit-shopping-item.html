@@ -1,0 +1,47 @@
+
+<ion-header>
+
+  <ion-navbar color="primary"> 
+      <ion-buttons end>
+          <button ion-button>
+            <ion-icon name ="home"></ion-icon>
+          </button>
+        </ion-buttons>
+    <ion-title>{{item?.name}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+    <img src='../../assets/imgs/logo.png' />
+
+    <ion-card>
+      <ion-card-content>
+        <p>Vous avez fais une erreur ?</p>
+        <p>Pas de souci, vous pouvez rectifier cela</p>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-item>
+    <ion-label>Nom</ion-label>
+    <ion-input [(ngModel)]="item.name" placeholder="Kit Blanchiment dentaire"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Quantité</ion-label>
+    <ion-input [(ngModel)]="item.quantity" type="number" placeholder="1"></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label>Prix</ion-label>
+    <ion-input [(ngModel)]="item.price" type="number" placeholder="29"></ion-input>
+  </ion-item>
+  
+  
+
+  <button ion-button block (click)="saveItem(item)">Modifier</button>
+  
+
+  <button color="danger" ion-button block (click)="removeItem(item)">SUPPRIMER</button>
+</ion-content>

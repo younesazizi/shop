@@ -1,0 +1,58 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+      <ion-buttons end>
+          <button navPush="HomePage" ion-button>
+            <ion-icon name ="home"></ion-icon>
+          </button>
+      </ion-buttons>
+    <ion-title>Ajout produit</ion-title>
+  </ion-navbar>
+  
+
+</ion-header>
+
+<ion-content padding>
+
+    <img src='../../assets/imgs/logo.png' />
+
+  <ion-card>
+      <ion-card-content>
+        <p>Choisissez un produit,</p>
+        <p>Ajoutez le à la liste,</p>
+        <p>N'oubliez personne cette année </p>
+        <p>Plein d'idées de cadeaux sur Azyou.fr ! </p>
+      </ion-card-content>
+    </ion-card>
+
+  <ion-item>
+    <ion-label>Nom</ion-label>
+    <ion-input  [(ngModel)]="item.name" placeholder="Kit Blanchiment dentaire"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Quantité</ion-label>
+    <ion-input [(ngModel)]="item.quantity" type="number" placeholder="1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Prix</ion-label>
+    <ion-input [(ngModel)]="item.price" type="number" placeholder="29"></ion-input>
+  </ion-item>
+
+
+
+  <button ion-button block (click)="addItem(item)">Ajouter</button>
+
+  <ion-card>
+      <ion-card-content>
+        <p>Joyeux shopping sur Azyou.fr</p>
+      </ion-card-content>
+    </ion-card>
+
+    <img src='../../assets/imgs/b.jpg' />
+
+  
+
+</ion-content>
